@@ -1,0 +1,121 @@
+@import url(https://fonts.googleapis.com/css?family=Lora:400,700);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+@blue:#00A5FF;
+@dGray:#3C404C;
+@f-size:16px;
+@round-bg:lighten(@dGray, 70%);
+//HEADER
+
+header{
+  background: url('../img/header-layout.png'),
+              fade(@dGray, 30%);
+  background-size: cover;
+  padding-top: 30px;
+
+  ul{
+    list-style-type: none;
+    li{
+      display: inline-block;
+      padding-right: 20px;
+
+      a{
+        display: block;
+        color: #fff;
+        text-decoration: none;
+      }
+    }
+    li:last-child{
+      margin-right: 0;
+      }
+    }//ul
+  h1{
+    margin-top: 150px;
+    text-align: center;
+    color:#fff;
+    font-family: "Lora", serif;
+    font-size: @f-size*3;
+    font-weight: bold;
+  }
+  h3{
+    text-align: center;
+    font-size: @f-size*1.2;
+    color: #fff;
+    margin-bottom: 50px;
+  }
+  p{
+    text-align: center;
+  }
+  input{
+    margin-bottom: 120px;
+  }
+}//header
+
+//section 1
+
+.s1{
+  h2{
+    text-align: center;
+    font-weight: bold;
+    font-family: "Lora", serif;
+    text-transform: uppercase;
+    position: relative;
+    margin-bottom: 80px;
+  }
+
+  h2::after{
+    position: absolute;
+    content: "";
+    background: @blue;
+    width: 50px;
+    height: 4px;
+    left: 48%;
+    bottom: -10px;
+    transition: all 1s linear 0s;
+  }
+
+
+
+  .serv-item{
+    position: relative;
+    margin-bottom: 100px;
+    .img-round{
+      margin-left: 33%;
+      position: relative;
+      background: @round-bg;
+      border-radius: 50%;
+      width: 80px;
+      height: 80px;
+      img{
+        position: absolute;
+        display: inline;
+        top:28%;
+        left: 30%;
+      }
+    }
+    h3{
+      text-align: center;
+    }
+    h3::after{
+      position: absolute;
+      content: "";
+      background: @dGray;
+      width: 50px;
+      height: 4px;
+      left: 40%;
+      top: 130px;
+      transition: all 1s linear 0s;
+    }
+    p{
+      text-align: justify;
+      color: @dGray;
+    }
+  }
+  .serv-item:hover h3::after{
+    width: 150px;
+    transform: translate(-50px);
+  }
+}//s1
+.s1:hover h2::after{
+  width: 210px;
+  transform: translate(-80px);
+}
